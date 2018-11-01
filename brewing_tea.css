@@ -1,0 +1,245 @@
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* .gallery-h1 {
+    font-size: 300%;
+} */
+
+h2 {
+    margin-left: 1em;
+    text-align: center;
+}
+
+.gallery-h2 {
+    font-size: 200%;
+    text-transform: uppercase;
+}
+
+body {
+    background-color: #e1f7e1;
+}
+
+ul {
+    margin-left: -20px;
+}
+
+/* This is most of the styling for the toolbar. The other toolbar styling is in ul and a.  */
+ul li {
+    border-style: solid;
+    border-color: black;
+    background-color: #c4f2d4;
+    border-radius: .4em;
+    border-width: .1em;
+    margin-bottom: .1em;
+    padding-bottom: .1em;
+    height: 2em;
+    list-style-type: none;
+    max-width: 38em;
+    font-size: 150%;
+    text-align: center;
+
+}
+
+.gallery-header {
+
+}
+
+a {
+    text-decoration: none;
+    font-size: 150%;
+    margin-top: 2em;
+}
+
+p {
+    margin-left: 1em;
+}
+
+.fix-p {
+    color: #e1f7e1;
+}
+
+img {
+    border-radius: 5%;
+    margin-left: 14em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+footer {
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+@media (min-width: 1040px) {
+    .container {
+        display: flex;
+        /* flex-direction: column; */
+    }
+    .container-2 {
+        display: flex;
+        flex-direction: left;
+        flex-wrap: wrap;
+    }
+    .container-3 {
+        display: flex;
+        flex-direction: left;
+    }
+    h2 {
+        font-size: 200%;
+        
+    }
+    img {
+        max-height: 400px;
+        /* margin-left: 30em; */
+    }
+    .purple-teapot {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .measure-tea: {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    h2,
+    p {
+        /* display: block; */
+    }
+    p {
+        font-size: 110%;
+    }
+    .first-paragraph {
+        max-width: 20em;
+        max-height: 10em;
+        padding-left: 15em;
+        /* padding: 0 3em 2em; */
+        /* margin-right: 10em; */
+        /* padding-top: -2em; */
+        order: -1 
+    }
+    .second-paragraph {
+        max-width: 20em;
+        max-height: 15em;
+        padding: 0 2em 2em;
+        margin-left: 10em;
+    }
+    .third-paragraph {
+        max-width: 20em;
+        max-height: 15em;
+        padding: 0 2em 2em -1em;
+        margin-left: 15em;
+    }
+    .fourth-paragraph {
+        max-width: 30em;
+        padding-left: 4em;
+    }
+    ul li {
+        text-align: center;
+        display: inline-block;
+    }
+    ul li {
+        text-align: center;
+        border: none;
+    }
+    ul {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 8em;
+        border-style: solid;
+        border-color: black;
+        background-color: #c4f2d4;
+        border-radius: .4em;
+        border-width: .1em;
+        margin-bottom: .1em;
+        padding-bottom: .1em;
+        list-style-type: none;
+        text-align: center;
+        max-width: 80em;
+        padding: 1em;
+    }
+    .item-1 {
+        margin-left: 13em;
+    }
+    }
+
+    /* Styles for the Modal */
+    #silverNeedle {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    #silverNeedle:hover {opacity: 0.7;}
+
+    /* the Modal */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1; 
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.9)
+    }
+
+    /* modal content (image) */
+    .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+    }
+
+    /* Modal Image's caption */
+    #caption {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 150px;
+    }
+
+    /* This adds animation to the modal */
+    .modal-content, #caption {
+        -webkit-animation-name: zoom;
+        -webkit-animation-duration: 0.6s;
+        animation-name: zoom;
+        animation-duration: 0.6s;
+    }
+
+    @-webkit-keyframes zoom {
+        from {-webkit-transform: scale(0)}
+        to {-webkit-transform: scale(1)}
+    }
+
+    @keyframes zoom {
+        from {transform: scale(0.1)}
+        to {transform: scale(1)}
+    }
+
+    /* the close button */
+    #close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    #close:hover,
+    #close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
