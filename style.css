@@ -1,0 +1,330 @@
+/* ELEMENT SELECTORS */
+h1 {
+    text-transform: uppercase;
+    text-align: center; 
+    /* Centers and uppercases the page's primary heading */
+}
+
+/* This places the secondary heading in the center of the page */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* This is to make the background of the website a very light green */
+body {
+    background-color: #e1f7e1;
+    font-family: "Open Sans";
+    margin: 0;
+    font-size: 110%
+}
+
+/* This is most of the styling for the toolbar. The other toolbar styling is in ul and a.*/
+/* These styles make the content in the toolbar larger */
+ul li {
+    border-style: solid;
+    border-color: black;
+    background-color: #c4f2d4;
+    border-radius: .4em;
+    border-width: .1em;
+    margin-bottom: .1em;
+    padding-bottom: .1em;
+    height: 2em;
+    list-style-type: none;
+    max-width: 38em;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Makes the items in the toolbar (which are all links) larger, removes the underlines, and adds a margin */
+a {
+    font-size: 26px;
+    text-decoration: none;
+    margin-top: 2em; 
+}
+
+img {
+    border-radius: 5%; 
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+/* centers the footer (which consists of a link) and adds more room to the bottom of the page */
+footer {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+/* CLASS SELECTORS */
+.gallery {
+    display: block;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ID SELECTORS */
+
+/* THE MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1; 
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9)
+}
+
+/* modal content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Modal Image's caption */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* This adds animation to the modal */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes zoom {
+    from {transform: scale(0.1)}
+    to {transform: scale(1)}
+}
+
+/* the close button */
+#close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#close:hover,
+#close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+}
+
+/* MEDIA QUERIES - 'Tablet size' */
+/* Font sizes are increased as the screen gets bigger */
+@media (min-width: 600px) { 
+    h1 {
+    font-size: 250%;
+    }
+
+h2 {
+    font-size: 175%;
+}
+
+p {
+    padding: 10px;
+    font-size: 1.3rem;
+    
+}
+
+ul li{    
+    display: block;
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+
+/* Targeting the gallery class lets me target all of the images in the gallery because they are placed in a div with the gallery class. The flex display and the justify content moves the images to the center and the flex wrap creates two columns for the images */
+.gallery {
+    margin: 0 auto;
+}
+
+.gallery img {
+    width: 49%;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.img {
+    width: 80%;
+    margin: auto;
+}
+
+/* Media Queries for larger screens */
+/* all four of the pages of the site get new layouts optimized for bigger screens */
+@media (min-width: 1000px) {
+h2 {
+    font-size: 200%;
+} /* increases the size of all h2 */
+
+h2, p {
+    display: block;
+}
+
+p {
+    font-size: 120%;
+    padding: 10px; 
+} /* font size of paragraphs is slightly increase and padding is added to keep text from being on the edge of the viewport */
+
+ul li {
+    text-align: center;
+    border: none; 
+    display: inline-block;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    border-style: solid;
+    border-color: black;
+    background-color: #c4f2d4;
+    border-radius: .4em;
+    border-width: .1em;
+    margin-bottom: .1em;
+    padding-bottom: .1em;
+    list-style-type: none;
+    text-align: center;
+    max-width: 80em;
+    padding: 1em;
+} /* */
+
+img {
+    max-height: 400px;
+    margin-left: 1em;
+    padding: 10px; /* keeps the images from being on the left margin */
+}
+
+/* CLASS SELECTORS */
+
+.intro-div {
+    display: grid;
+    grid-template-rows: auto auto auto
+}
+
+.first-p {
+    /* order: -1; */
+} /* places the tea picture on the homepage in the center by making the first paragraph's order first */
+
+/* where tea comes from */
+.where-container {
+    display: flex;
+    flex-direction: justify;
+} 
+.where-container-2 {
+    display: flex;
+}
+.where-container-3 {
+   display: grid;
+   grid-template-columns: auto auto;
+} 
+
+/* sizing the photos to keep them from being too big */
+.tea-regions {
+    display: flex;
+    flex-direction: left;
+    padding: 10px;
+    width: 500px;
+    height: 400px;
+}
+
+.tea-field {
+    width: 500px;
+    height: 400px;
+}
+
+.tea-drying {
+    width: 80%;
+    margin-left: 100px;
+}
+
+/* brewing tea  */
+.brew-container {
+    display: flex;
+    flex-direction: left;
+}
+   
+/* this container is styled as a grid in three parts  */
+.brew-container-2 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.brew-paragraph {
+    max-width: 40em;
+    padding-right: 5em;
+}
+
+.brew-paragraph-4 {
+    max-width: 40em;
+    padding-right: 5em;
+}
+
+/* margin 0 auto centers content */
+/* photos are sized to keep them from being too big */
+/* padding added to some photos to keep them from being against the screen to the left */
+
+.purple-teapot {
+    max-width: 100%;
+    margin: 0 auto;
+    margin-right: 4em;
+    width: 500px;
+    height: 400px;
+}
+.modern-teapot {
+    width: 400px;
+    height: 400px;
+    padding: 5px;
+}
+.measure-tea {
+    display: block;
+    margin: 0 auto;
+    width: 40%
+}
+
+.steep-tea {
+    display: block;
+    margin: 0 auto;
+    width: 60%
+}
+
+.brew-paragraph-4 {
+    display: block;
+    margin: 0 auto;
+}
+
+/* ID SELECTORS */
+#middle-img {
+    width: 70%;
+    margin: 0 auto;
+}
+} 

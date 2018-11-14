@@ -1,21 +1,21 @@
 h1 {
     text-transform: uppercase;
-    text-align: center;
+    text-align: center; 
+    /* Centers and uppercases the page's primary heading */
 }
 
+/* This places the secondary heading in the center of the page */
 h2 {
     text-align: center;
 }
 
+/* This is to make the background of the website a very light green */
 body {
     background-color: #e1f7e1;
 }
 
-ul {
-    margin-left: -20px;
-}
-
-/* This is most of the styling for the toolbar. The other toolbar styling is in ul and a.  */
+/* This is most of the styling for the toolbar. The other toolbar styling is in ul and a.*/
+/* These styles make the content in the toolbar larger */
 ul li {
     border-style: solid;
     border-color: black;
@@ -31,30 +31,28 @@ ul li {
     text-align: center;
 }
 
+/* Makes the items in the toolbar (which are all links) larger, removes the underlines, and adds a margin */
 a {
     font-size: 175%;
     text-decoration: none;
-    margin-top: 2em;
+    margin-top: 2em; 
 }
 
-div {}
-
-h2 {
-    margin-left: 1em;
-}
-
+/* Adds a slight margin to the paragraphs and the secondary heading */
+h2,
 p {
     margin-left: 1em;
 }
 
+/* adds a slight curve to images */
 img {
-    border-radius: 5%;
-    margin-left: 15em;
+    border-radius: 5%; 
 }
 
+/* centers the footer (which consists of a link) and adds more room to the bottom of the page */
 footer {
     text-align: center;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 /* Media Queries - 'Tablet size' */
@@ -62,17 +60,25 @@ footer {
 h1 {
     font-size: 250%;
 }
+
 h2 {
     font-size: 175%;
 }
+
 ul li {
     font-size: 150%;
- } 
+    /* height: 90px; */
+    display: block;
+    padding-bottom: 1em;
+    padding-top: 1em;
+} 
+
 img {
     /* margin-left: 5em; */
 }
 }
 
+/* Media Queries for larger screens */
 @media (min-width: 1040px) {
 .intro-div{
     display: flex;
@@ -82,24 +88,23 @@ h2 {
     font-size: 200%;
     
 }
-img {
-    flex-direction: left;
-    max-height: 400px;
-    margin-left: 1em;
-}
+
 h2,
 p {
     display: block;
 }
+
 p {
     font-size: 110%;
 }
+
 .first-p {
     order: -1;
 }
+
 ul li {
     text-align: center;
-    border: none;
+    border: none; 
 }
 
 ul {
@@ -119,11 +124,13 @@ ul {
     padding: 1em;
 }
 
-/* This is most of the styling for the toolbar. The other toolbar styling is in ul and a.  */
-ul li {
-    
+img {
+    flex-direction: left;
+    max-height: 400px;
+    margin-left: 1em;
 }
-.item-1 {
+
+/* .item-1 {
     margin-left: 13em;
-}
+} */
 }

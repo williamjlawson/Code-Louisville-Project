@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- makes the view more mobile friendly, sets the width of the page to follow the width of the device. Also sets the initial zoom level when the page is loaded by the browser -->
         <title>Types of Tea</title>
-        <link rel="stylesheet" href="brewing_tea.css">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
     </head>
+
     <body>
         <div>
-            <h1 class="gallery-h1">Types of Tea</h1>
+            <h1>Types of Tea</h1>
         </div>
 
         <div>
@@ -20,11 +23,11 @@
 
         <div>
             <h2 class="gallery-h2">Gallery</h2>
-            <p class="fix-p">Suspendisse dapibus justo sit amet elit facilisis aliquam. Nullam nulla eros, sollicitudin nec lacus id, maximus faucibus nunc. Fusce sollicitudin sapien vitae dignissim venenatis.</p>      
         </div>
 
         <!-- Gallery images -->
-        <div>
+        <!-- I placed all the gallery images in a div -->
+        <div class="gallery">
             <img id="silver-needle"
             src="https://cdn.shopify.com/s/files/1/0220/5782/products/loose-leaf-white-silver-needle-tea-from-fujian-china_1024x1024.jpg?v=1418589151" height="400px" width="500px" alt="Silver Needle White Tea from the Fujian Province, China"/>
             <img id="dragonwell"
@@ -48,7 +51,7 @@
             <img id="darjeeling"
             src="https://static1.squarespace.com/static/576588cfb8a79b23387ff359/594f36ad1b631bec822ed186/5a6f970a8165f5354fd53ba9/1517262691424/assam-kachibari-village-organic-black-tea.jpg?format=500w" height="400px" width="500px" alt="Black tea from Darjeeling Province in India">
             <img id="pu-erh"
-            src="https://jingtea.com/shop/media/catalog/product/cache/1/image/575x/9df78eab33525d08d6e5fb8d27136e95/2/0/2008-cooked-pu-erh-mini-cakes_loose-tea_gallery_v2.jpg" height="400px" width="500px" alt="Tea cakes of Pu erh tea. Pu erh is a fermented tea"> 
+            src="https://sonrie-te.com/wp-content/uploads/2018/04/1493482278.jpg" height="400px" width="500px" alt="Tea cakes of Pu erh tea. Pu erh is a fermented tea"> 
         </div>
 
         <!-- Modal div -->
@@ -59,8 +62,9 @@
         </div>
     
         <footer>
-                <a href="#top">Return to top</a>
+                <a href="#top">Return to top</a> <!-- link that returns user to the top of the page-->
         </footer>
+        
         <script src="script.js"></script>
     </body>
 </html>
